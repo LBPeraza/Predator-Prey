@@ -1,6 +1,6 @@
 
 myId = 2;
-prey = 17;
+preyId = 17;
 
 HPS = HowiePositioningSystem();
 
@@ -11,7 +11,7 @@ target = [30; 30];
 while true
     HPS.fetch();
     
-    targ = frame_position(HPS, prey, trans, xnt);
+    targ = frame_position(HPS, preyId, trans, xnt);
     target = targ(1:2);
     
     cur = frame_position(HPS, myId, trans, xnt);
