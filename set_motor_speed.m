@@ -9,7 +9,7 @@ mb = max(min(motorB, 100), -100);
 ma = round(ma);
 mb = round(mb);
 
-DirectMotorCommand(MOTOR_A, -ma, 0, 'off', 'off', 0, 'off');
-DirectMotorCommand(MOTOR_B, -mb, 0, 'off', 'off', 0, 'off');
+DirectMotorCommand(MOTOR_A, ma, 0, 'off', 'off', 0, 'off');
+DirectMotorCommand(MOTOR_B, mb, 0, 'off', 'off', 0, 'off');
 
 end

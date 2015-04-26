@@ -17,7 +17,6 @@ while true
     cur = frame_position(HPS, myId, trans, xnt);
     tip = get_tip(cur);
     diff = target - tip;
-    disp(diff);
     
     diffNorm = diff / norm(diff);
     
