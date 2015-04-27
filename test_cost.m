@@ -1,11 +1,11 @@
 
-HPS = HowiePositioningSystem();
+%HPS = HowiePositioningSystem();
 
-[trans, xnt] = get_frame(HPS);
+%[trans, xnt] = get_frame(HPS);
 
 predatorId = 17;
 
-pred = [30; 30];
+pred = [50; 30];
 
 res = 60;
 costs = zeros(res+1);
@@ -15,8 +15,8 @@ for i = 0:res
     end
 end
 s_old = surf(costs);
-figure;
-imshow(scale_to_im(costs));
+%figure;
+%imshow(scale_to_im(costs));
 %{
 while true
     HPS.fetch();

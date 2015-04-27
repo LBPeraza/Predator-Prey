@@ -53,18 +53,18 @@ while true
         
         target = mins(targetIndex, 1:2);
         %}
-        target = desired_point(cur, pred);
+        target = desired_point(tip, pred);
         diff = target - tip;
     
         diffNorm = diff / norm(diff);
         %disp(diffNorm);
         v = diffNorm * 3; %max(1, min(5, norm(diff)));
-        disp(v);
-        die;
+        %disp(v);
+        %die;
         
         vs = get_wheel_velocities(cur, tip + v / 20);
         %disp(vs);
-        %set_motor_speed(vs);
+        set_motor_speed(vs);
     end
     pause(0.1);
 end
