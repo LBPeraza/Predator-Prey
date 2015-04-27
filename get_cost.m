@@ -26,10 +26,21 @@ if (y < 20 || y > 40)
     cost = cost + s * (y - 30) ^ 2 + c;
 end
 %{
-border = 6;
+current = cur(1:2);
+th = cur(3);
 
-if (x < border || x > 60 - border || y < border || y > 60 - border)
-    cost = cost + 20
-end
+k = 4;
+diff = p' - current;
+diff = diff / norm(diff);
+dir = [cos(th); sin(th)];
+%cost = cost - diff' * dir * k;
+
+
+thDiff = radtodeg(atan2(diff(2), diff(1)));
+thErr = thDiff - th;
+thErr = min(thErr, 360 - thErr);
+
+k = 1;
+cost = cost + abs(thErr) * k;
 %}
 end
