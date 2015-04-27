@@ -1,6 +1,6 @@
 
 myId = 2;
-preyId = 1;
+preyId = 17;
 
 HPS = HowiePositioningSystem();
 
@@ -32,11 +32,10 @@ while true
         v = diffNorm * max(1, min(5, norm(diff)));
     
         vs = get_wheel_velocities(cur, tip + v / 20);
-        disp(vs);
         set_motor_speed(vs);
-        pause(0.1);
     end
     if (GetSwitch(SENSOR_1))
         NXT_PlayTone(400, 500);
     end
+    pause(0.1);
 end

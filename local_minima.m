@@ -16,7 +16,7 @@ for i = 2:h-1
             end
         end
         if (m)
-            minima = [minima; i j];
+            minima = [minima; i j cost];
         end
     end
 end

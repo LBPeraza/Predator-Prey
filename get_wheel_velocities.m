@@ -1,6 +1,6 @@
 function [ vs ] = get_wheel_velocities ( current, desired )
 
-kp = 3.5;
+kp = 6.0;
 
 [tip, th, lx, ly] = get_tip(current);
 th = -th;
